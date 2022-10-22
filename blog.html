@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      referrerpolicy="no-referrer"
+      rel="stylesheet"
+    />
+    <link href="css/utilities.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Read Our Blog</title>
+  </head>
+  <body id="home">
+    <header class="hero blog">
+      <div class="navbar top" id="navbar">
+        <h1 class="logo">
+          <span class="text-primary">
+            <i class="fas fa-book-open"></i> Edge</span
+          >Ledger
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="index.html#about">About</a>
+            </li>
+            <li>
+              <a href="index.html#cases">Cases</a>
+            </li>
+            <li>
+              <a href="index.html#blog">Blog</a>
+            </li>
+            <li>
+              <a href="index.html#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+        <h1>Blog</h1>
+      </div>
+    </header>
+
+    <main>
+      <article class="flex-columns">
+        <div class="row">
+          <div class="column">
+            <div class="column-1">
+              <img alt="" src="images/blog/blog1.jpg" />
+            </div>
+          </div>
+          <div class="column">
+            <div class="column-2 bg-light">
+              <h2>Blog Post One</h2>
+              <p class="meta">
+                <i class="fas fa-user"></i>
+                Posted By <strong>John Doe</strong> | April 19 2020
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                aliquid delectus dolore sapiente! Alias, aliquid dolor earum est
+                eveniet inventore ipsum iste maiores mollitia natus nisi quasi
+                tenetur ut, veritatis?
+              </p>
+              <a class="btn btn-dark" href="post.html">
+                <i class="fas fa-chevron"></i> Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="flex-columns">
+        <div class="row">
+          <div class="column">
+            <div class="column-1">
+              <img alt="" src="images/blog/blog2.jpg" />
+            </div>
+          </div>
+          <div class="column">
+            <div class="column-2 bg-dark">
+              <h2>Blog Post Two</h2>
+              <p class="meta">
+                <i class="fas fa-user"></i>
+                Posted By <strong>Jane Doe</strong> | April 21 2020
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                aliquid delectus dolore sapiente! Alias, aliquid dolor earum est
+                eveniet inventore ipsum iste maiores mollitia natus nisi quasi
+                tenetur ut, veritatis?
+              </p>
+              <a class="btn btn-light" href="post.html">
+                <i class="fas fa-chevron"></i> Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="flex-columns flex-reverse">
+        <div class="row">
+          <div class="column">
+            <div class="column-1">
+              <img alt="" src="images/blog/blog3.jpg" />
+            </div>
+          </div>
+          <div class="column">
+            <div class="column-2 bg-light">
+              <h2>Blog Post Three</h2>
+              <p class="meta">
+                <i class="fas fa-user"></i>
+                Posted By <strong>John Doe</strong> | April 23 2020
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                aliquid delectus dolore sapiente! Alias, aliquid dolor earum est
+                eveniet inventore ipsum iste maiores mollitia natus nisi quasi
+                tenetur ut, veritatis?
+              </p>
+              <a class="btn btn-light" href="post.html">
+                <i class="fas fa-chevron"></i> Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!--  footer-->
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>Copyright &copy; All rights reserved.</p>
+    </footer>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      let scrolled = false;
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled = false;
+        }
+      };
+    </script>
+  </body>
+</html>
